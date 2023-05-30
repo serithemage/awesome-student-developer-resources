@@ -1,6 +1,8 @@
 # awesome-student-developer-resources
 A compiled list of discounted and free programs for student developers.
 
+> https://bit.ly/awesome-academy
+
 ## Dev Tools
 - [Visual Studio developer for studnets](https://visualstudio.microsoft.com/students/) - Visual Studio Developer for Students is a program by Microsoft that provides students with free access to Visual Studio, a powerful integrated development environment (IDE) for software development. It offers a range of features and tools to support coding, debugging, and testing applications across various platforms and programming languages. Visual Studio Developer for Students allows students to gain hands-on experience in software development, explore different technologies, and build projects. It aims to equip students with the necessary tools to enhance their programming skills and prepare for a career in software development.
 - [Jet Brains- Free Educational Licenses](https://www.jetbrains.com/community/education/#students) - JetBrains offers free access to their professional software development tools, such as IntelliJ IDEA, PyCharm, and PhpStorm, for students. You need to provide proof of your academic status to obtain the license.
