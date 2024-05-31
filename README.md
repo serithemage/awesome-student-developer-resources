@@ -9,6 +9,7 @@ A compiled list of discounted and free programs for student developers.
 - [GitHub Student Developer Pack](https://education.github.com/pack#offers) - This pack provides a collection of software development tools and services for students, including GitHub Pro, JetBrains IDEs, Canva, and more. It's available for students aged 13 or older.
 - [Unity Student Plan](https://unity.com/products/unity-student) - Unity provides a free Student Plan that grants students access to their Unity Pro game development platform. It includes features like real-time rendering, multiplayer, and more.
 - [Unreal Student Plan](https://www.unrealengine.com/en-US/students) - Unreal Student Plan is a program offered by Epic Games that provides students with free access to Unreal Engine, a popular game development platform. The Unreal Student Plan allows students to use Unreal Engine for educational purposes, such as learning game development, creating projects, and building interactive experiences. 
+- [Docker Student Developer Kit](https://www.docker.com/docker-student-developer-kit) - Docker offers a free Student Developer Kit which includes Docker Desktop, resources for learning Docker, and a free Docker Hub plan.
 
 ## Cloud
 - [AWS Educate](https://aws.amazon.com/education/awseducate/) - AWS Educate is a program by Amazon Web Services (AWS) that offers students and educators resources and tools to learn about cloud computing and AWS services. It includes free AWS credits, learning pathways, a job board, educator collaboration, and preparation for AWS certifications. It helps students gain practical experience, build skills, and connect with potential employers in the cloud computing field.
@@ -20,4 +21,7 @@ A compiled list of discounted and free programs for student developers.
 ## Design Tools
 - [Adobe Creative Cloud for Students](https://www.adobe.com/creativecloud/buy/students.html) - Adobe offers discounted or free access to their Creative Cloud suite, which includes applications like Photoshop, Illustrator, and Premiere Pro, for students enrolled in eligible educational institutions.
 - [Figma for Education](https://www.figma.com/education/) - Figma and FigJam are design and collaboration software used by professional designers, engineers, and makers of all kinds. Use them to ideate, create, and share work—all free, as a student or teacher.
+
+## Productivity Tools
+- [Notion for Students and Educators](https://www.notion.so/product/notion-for-education) - Notion is a comprehensive productivity tool that allows users to take notes, manage tasks, create wikis, and much more. Notion provides students and educators with a free Personal Pro plan. You just need to sign up using your academic email to get access.
 
