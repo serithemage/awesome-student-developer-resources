@@ -32,5 +32,5 @@
 - [Claude for Education](https://www.anthropic.com/education) - Anthropic의 Claude for Education은 고등 교육을 위한 특화된 Claude 버전을 제공합니다. 가이드 학습을 위한 Learning mode, 학생 프로젝트를 위한 API 크레딧, 다수 대학과의 파트너십이 포함됩니다. 기관에서 Anthropic에 연락하여 캠퍼스 전체 접근권을 요청할 수 있습니다.
 - [Gemini for Students](https://gemini.google/students/) - Google은 자격을 갖춘 대학생에게 Google One AI Premium(Gemini Advanced 포함)을 최대 12~15개월 무료로 제공합니다. 최신 모델 기반의 Gemini Advanced, 2TB 저장공간, NotebookLM Plus, Deep Research 등의 도구가 포함됩니다. SheerID를 통해 재학 여부를 인증해야 합니다.
 - [Cursor Free Plan](https://www.cursor.com/) - AI 기반 코드 에디터로, 무료 플랜에서 월 50회 프리미엄 AI 요청과 다중 파일 편집 기능을 제공합니다. VS Code 기반으로 익숙한 환경에서 AI 코딩을 체험할 수 있습니다.
-- [Amazon Q Developer Free Tier](https://aws.amazon.com/q/developer/) - AWS에서 제공하는 AI 코딩 어시스턴트입니다. 코드 생성, 디버깅, 최적화를 지원하며, AWS 서비스와의 통합이 강점입니다. 무료 티어로 개인 개발자와 학생이 이용할 수 있습니다.
+- [Kiro for students](https://kiro.dev/students/) - AWS에서 제공하는 AI 코딩 어시스턴트입니다. 코드 생성, 디버깅, 최적화를 지원하며, AWS 서비스와의 통합이 강점입니다. 인증된 학교의 학생은 1년간 매달 1,000 크레딧을 무료로 지원합니다. 미국 내 10개 대학을 시작으로 지원하고 있으며 지원 대상 학교가 아니면 Waitlist 에 등록할 수 있습니다.
 - [Continue.dev](https://www.continue.dev/) - 오픈소스 AI 코딩 어시스턴트로 VS Code와 JetBrains IDE를 지원합니다. 자체 API 키를 연결하면 다양한 LLM을 무제한으로 사용할 수 있어, 비용 부담 없이 AI 코딩을 활용하고 싶은 학생에게 적합합니다.
