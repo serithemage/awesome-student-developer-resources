@@ -44,6 +44,7 @@ _Last updated: 2026-08-06_
 - 🎓 [Claude for Education](https://www.anthropic.com/education) - Anthropic's Claude for Education provides a version of Claude specialized for higher education, including Learning mode for guided study, API credits for student projects, and partnerships with numerous universities. Institutions can contact Anthropic for campus-wide access.
 - 🎓 [Gemini for Students](https://gemini.google/students/) - Google offers eligible university students up to 12–15 months of Google One AI Premium (including Gemini Advanced) for free, with the latest models, 2TB of storage, NotebookLM Plus, and Deep Research. Student status is verified via SheerID.
 - 🎓 [Perplexity Education Pro](https://www.perplexity.ai/students) - 50% off Perplexity Pro ($10/month) for university students, faculty, and staff, including education features such as Learn Mode. Verify via SheerID.
+- 🆓 [StudyArena](https://studyarena.com) - Free three-model comparisons for study questions: read anonymous answers, vote, then reveal the models. No student verification required; model selection and six-answer comparisons require Supporter.
 
 ## Developer Tools
 

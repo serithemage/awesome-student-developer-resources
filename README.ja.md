@@ -44,6 +44,7 @@ _最終更新: 2026-08-06_
 - 🎓 [Claude for Education](https://www.anthropic.com/education) - AnthropicのClaude for Educationは、高等教育に特化したClaudeを提供します。ガイド付き学習のためのLearning mode、学生プロジェクト向けのAPIクレジット、多数の大学とのパートナーシップが含まれます。教育機関はAnthropicに連絡してキャンパス全体のアクセスをリクエストできます。
 - 🎓 [Gemini for Students](https://gemini.google/students/) - Googleは対象の大学生にGoogle One AI Premium(Gemini Advancedを含む)を最大12〜15か月間無料で提供します。最新モデルベースのGemini Advanced、2TBのストレージ、NotebookLM Plus、Deep Researchなどのツールが含まれます。SheerIDによる在学認証が必要です。
 - 🎓 [Perplexity Education Pro](https://www.perplexity.ai/students) - 大学以上の在学生・教職員にPerplexity Proを50%割引($10/月)で提供します。Learn Modeなどの教育機能が含まれ、SheerIDで認証します。
+- 🆓 [StudyArena](https://studyarena.com) - 学習の質問に対する三つのモデルの回答を匿名で比較し、投票後にモデル名を確認できる無料ツールです。学生認証は不要です。モデルの選択と六つの回答の比較には有料のSupporterが必要です。
 
 ## 開発ツール
 
