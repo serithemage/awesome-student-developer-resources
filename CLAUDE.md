@@ -24,5 +24,5 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Maintenance Notes
 
-- 학생 혜택 프로그램은 조건(크레딧 금액, 무료 기간, 요금제)이 자주 바뀌므로, 항목을 갱신할 때는 공식 페이지 기준으로 최신 정보를 확인한 후 반영합니다. 프로모션 정보 일괄 갱신은 `update-promotions` 스킬을 사용하세요.
+- 학생 혜택 프로그램은 조건(크레딧 금액, 무료 기간, 요금제)이 자주 바뀌므로, 항목을 갱신할 때는 공식 페이지 기준으로 최신 정보를 확인한 후 반영합니다. 프로모션 정보 일괄 갱신은 `update-promotions` 스킬을 사용하세요. 매주 월요일에는 `.github/workflows/weekly-update.yml`이 pi 에이전트(DeepSeek 모델 + Exa 검색)로 같은 작업을 수행해 PR을 엽니다. 에이전트 지시문은 `.github/prompts/weekly-update.md`입니다.
 - 단축 URL `https://bit.ly/awesome-academy`가 이 저장소를 가리키므로 저장소 이름 변경에 주의하세요.
