@@ -28,6 +28,8 @@ jobs:
       PI_TELEMETRY: "0"
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # the agent checks git history for previously removed entries
 
       - uses: actions/setup-node@v4
         with:

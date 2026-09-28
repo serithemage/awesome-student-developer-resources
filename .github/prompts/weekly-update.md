@@ -8,6 +8,10 @@ Follow the repository conventions in `CLAUDE.md` (entry format, 🎓/🆓 marker
 - Use `web_search_exa` to find current information and `web_fetch_exa` to open official pages.
 - Only official pages of the program (vendor site, pricing page, official docs or blog) count as evidence.
   Search snippets, third-party blogs and community posts are never sufficient on their own.
+- Every number or condition you write must come from an official page you actually opened with `web_fetch_exa`
+  in this run. If the fetch fails or the page does not state it, classify the entry as `unverifiable`.
+  Do not fill gaps with prior knowledge or search summaries.
+- Check regional eligibility (e.g. "US only", "excluding US"), age limits, plan names and deadlines exactly.
 
 ## Steps
 
@@ -18,10 +22,15 @@ Follow the repository conventions in `CLAUDE.md` (entry format, 🎓/🆓 marker
 3. Discover new programs with one broad search for free tools and discounts for student developers
    in the current year, with an emphasis on AI and vibe-coding tools. Exclude programs already listed.
    Keep a candidate only if its official page explicitly states the student (or free-for-everyone) benefit.
+   Reject any product that has closed new sign-ups, announced end of support, or been replaced by a successor
+   (search for "<product> end of support" before adding). Also reject products that were previously removed
+   from the list — check `git log -p -S "<product>" -- README.md` first.
 4. Edit the READMEs:
    - Apply `changed` entries and add verified new entries to all three files
      (`README.md`, `README.ko.md`, `README.ja.md`), writing natural prose in each language.
    - Quote numbers exactly as the official page states them.
+   - Keep product names in their original form in all three languages (do not translate names in `[...]`).
+   - Do not use `~` in text (it breaks Markdown rendering); write ranges with `-`.
    - Do not touch `unverifiable` entries.
    - **Never delete entries.** Leave `ended` entries in place; they are listed in the report for a human to decide.
    - If anything changed, set the `Last updated` / `최종 갱신` / `最終更新` date in all three files to today's date (UTC).
@@ -32,4 +41,5 @@ Follow the repository conventions in `CLAUDE.md` (entry format, 🎓/🆓 marker
    - `## 확인 불가` — list of entries with the reason
    Write "없음" under any empty heading.
 
-Do not modify any file other than the three READMEs and the report file. Do not run git commands.
+Do not modify any file other than the three READMEs and the report file.
+Read-only git commands (`git log`, `git show`, `git diff`) are allowed; do not run any git command that changes state.
