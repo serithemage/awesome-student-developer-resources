@@ -31,20 +31,19 @@ _最終更新: 2026-09-28_
 
 ## AIコーディングツール
 
-- 🆓 [GitHub Copilot Free](https://github.com/features/copilot) - GitHubが提供するAIコーディングアシスタントです。無料プランで月2,000回のコード補完と50回のチャットが利用でき、GitHub Student Developer Pack認証済みの学生はGitHub Copilot Studentプランを無料で利用できます。
+- 🆓 [GitHub Copilot Free](https://github.com/features/copilot) - GitHubが提供するAIコーディングアシスタントです。無料プランで月2,000回のコード補完と一定量のチャットが利用でき、GitHub Student Developer Pack認証済みの学生はGitHub Copilot Studentプランを無料で利用できます。
 - 🆓 [Cursor Free Plan](https://www.cursor.com/) - VS CodeベースのAIコードエディタです。無料のHobbyプランではAutoモデルを使ったAgent、Chat、Tab補完を限定的に利用でき、クレジットカードは不要です。有料プランは月$20からです。
 - 🎓 [Zed Education](https://zed.dev/education) - 18歳以上の大学在学生にZed Proを1年間無料で提供します。月$10相当のAIトークンクレジットと無制限のedit predictionが含まれます。作成から30日以上経過したGitHubアカウントと大学のメールアドレスで認証し、1年後はFreeプランに移行します。
 - 🎓 [OpenAI Codex Student Credits](https://developers.openai.com/community/students) - OpenAIのコーディングエージェントCodexに使える$100相当(2,500クレジット)のChatGPTクレジットを提供します。発行後12か月有効、1人1回で、米国・カナダ在住の学位課程の大学生がSheerID認証で受け取れます。
-- 🎓 [Kiro for Students](https://kiro.dev/students/) - AWSが提供するAIコーディングエージェントです。コード生成、デバッグ、最適化をサポートし、AWSサービスとの統合が強みです。18か国132大学の学生が1年間、毎月1,000クレジットを無料で受け取れ、プレミアムモデルとKiro Webが含まれます。大学のメールアドレスでSheerID認証を行います。
-- 🆓 [Amazon Q Developer 無料ティア](https://aws.amazon.com/q/developer/) - IDEとCLIで使えるAWSのAIコーディングアシスタントです。無料ティアでは最新のClaudeモデルを使ったエージェントリクエストを月50回、Javaアップグレード変換を月1,000行まで利用できます。Proティアはユーザーあたり月$19です。
-- 🆓 [Continue.dev](https://www.continue.dev/) - VS Code、JetBrains IDE、CLIをサポートするオープンソースのAIコーディングエージェントです。Cursorに買収された後もオープンソースのコードベースは無料で公開されていますが、積極的な開発は終了しています。
+- 🎓 [Kiro for Students](https://kiro.dev/students/) - AWSが提供するAIコーディングエージェントです。コード生成、デバッグ、最適化をサポートし、AWSサービスとの統合が強みです。16か国132大学の18歳以上の学生が1年間、毎月1,000クレジットを無料で受け取れ、プレミアムモデルとKiro Webが含まれます。大学のメールアドレスでSheerID認証を行います。
+- 🆓 [Continue.dev](https://www.continue.dev/) - VS Code、JetBrains IDE、CLIをサポートするオープンソースのAIコーディングエージェントです。Cursorに買収されましたが、オープンソースのコードベースは引き続き無料で公開されています。
 - 🆓 [Google Antigravity](https://antigravity.google/) - 自律エージェントでソフトウェアを構築するGoogleのエージェントファーストIDEです。無料の個人プランでGemini 3モデル、Claude、GPT-OSSを利用でき、週次の利用上限内でTab補完とコマンドリクエストを無制限に使えます。
 
 ## AIアシスタント・教育プラン
 
-- 🎓 [ChatGPT Edu](https://openai.com/chatgpt/education/) - OpenAIのChatGPT Eduは大学・高等教育機関向けに設計されています。学生・教職員にGPT-5へのアクセス、エンタープライズレベルのセキュリティ、高いメッセージ上限、データ分析・チュータリング・研究支援ツールを提供します。教育機関は手頃な価格でキャンパス全体に展開できます。
+- 🎓 [ChatGPT Edu](https://openai.com/chatgpt/education/) - OpenAIのChatGPT Eduは大学・高等教育機関向けに設計されています。学生・教職員にOpenAIの最新フラッグシップモデルへのアクセス、エンタープライズレベルのセキュリティ、高いメッセージ上限、データ分析・チュータリング・研究支援ツールを提供します。教育機関は手頃な価格でキャンパス全体に展開できます。
 - 🎓 [Claude for Education](https://www.anthropic.com/education) - AnthropicのClaude for Educationは、高等教育に特化したClaudeを提供します。ガイド付き学習のためのLearning mode、学生プロジェクト向けのAPIクレジット、多数の大学とのパートナーシップが含まれます。教育機関はAnthropicに連絡してキャンパス全体のアクセスをリクエストできます。
-- 🎓 [Gemini for Students](https://gemini.google/students/) - Googleは対象の学生にGoogle AI Proの12か月無料トライアルを提供します(現在は米国の高等教育機関の学生が対象)。Gemini、Deep Research、NotebookLMなどへの拡張アクセスと追加ストレージが含まれます。Google AI ProをYouTube Premium学生プランと組み合わせて最長4年間利用することもできます。SheerIDで認証します。
+- 🎓 [Gemini for Students](https://gemini.google/students/) - Googleは米国以外の対象学生にGoogle AI Plusを12か月無料で提供し、Google AI Proは学生割引価格で提供しています。Google AI ProをYouTube Premium学生プランと組み合わせて最長4年間利用することもできます。学校のメールアドレスでSheerID認証を行い、2026年12月31日までに申し込む必要があります。
 - 🎓 [Perplexity Education Pro](https://www.perplexity.ai/students) - 大学以上の在学生・教職員にPerplexity Proを50%割引($10/月)で提供します。Learn Modeなどの教育機能が含まれ、SheerIDで認証します。
 - 🆓 [StudyArena](https://studyarena.com) - 学習の質問に対する3つのモデルの回答を匿名で比較し、投票後にどのモデルだったかを確認できる無料ツールです。無料アカウント（Google・Apple・Discord・メール）があれば使え、学生認証は不要です。モデルの指定と6つの回答の比較には有料プラン「Supporter」（月額$20）が必要です。
 
@@ -59,18 +58,18 @@ _最終更新: 2026-09-28_
 
 ## クラウド
 
-- 🆓 [AWS Educate](https://aws.amazon.com/education/awseducate/) - Amazon Web Services(AWS)が誰でも無料で利用できる、自分のペースで学べるクラウドコンピューティング講座、ハンズオンラボ、デジタルバッジに加え、求人掲示板とAWS Emerging Talent Communityを提供します。13歳以上ならクレジットカードや学生認証なしで利用できます。
+- 🆓 [AWS Educate](https://aws.amazon.com/education/awseducate/) - Amazon Web Services(AWS)が誰でも無料で利用できる、自分のペースで学べるクラウドコンピューティング講座、ハンズオンラボ、デジタルバッジを提供します。13歳以上ならクレジットカードや学生認証なしで利用でき、18歳以上は求人掲示板も利用できます。
 - 🎓 [Microsoft Azure for Students](https://azure.microsoft.com/en-us/free/students/) - 学生に$100のクレジットとAzureサービスへの12か月間の無料アクセスを提供します。仮想マシン、ストレージ、データベースなど様々なクラウドサービスを利用でき、学校のメールアドレスで認証します。
 - 🎓 [Google Cloud for Students](https://cloud.google.com/edu/students) - Googleが学生にGoogle Cloud Platform(GCP)のリソースとサービスへの無料アクセスを提供します。Google Skillsクレジット200個(発行から1年間有効)、Google Skills Arcadeの無料ハンズオン、スキルバッジ、Cloud Certificateなどで、コンピューティング、ストレージ、機械学習、データ分析を探索・実験できます。
 - 🎓 [MongoDB for Students](https://www.mongodb.com/students) - GitHub Student Developer Packを通じて、学生にMongoDB Atlasクレジット$50とMongoDB認定資格(約$150相当)を無料で提供します。データベーススキルの習得と証明に役立ちます。
 
 ## コラボレーションツール
 
-- 🎓 [Atlassian for Education](https://www.atlassian.com/licensing/purchase-licensing) - Atlassianは教育機関に割引アカデミックライセンス(定価の50〜75%オフ)を提供し、学生・教師にはClassroomライセンス(ほとんどのクラウドアプリが75%オフ、Bitbucket Cloudは無料)を提供しています。最大10ユーザーの無料プランも誰でも利用できます。
+- 🎓 [Atlassian for Education](https://www.atlassian.com/licensing/purchase-licensing) - Atlassianは教育機関に製品ごとに割引率が異なるアカデミックライセンス(おおむね定価の50%オフ、Confluenceは75%オフ、一部製品は最大100%オフ)を提供し、学生・教師にはClassroomライセンス(ほとんどのクラウドアプリが75%オフ、Bitbucket Cloud Standardは無料)を提供しています。最大10ユーザーの無料プランも誰でも利用できます。
 
 ## デザインツール
 
-- 🎓 [Adobe Creative Cloud for Students](https://www.adobe.com/creativecloud/buy/students.html) - Adobeは学生と教師に、Photoshop、Illustrator、Premiere Proなどを含むCreative Cloud Proを初年度69%オフの月US$19.99で提供しています。認定教育機関の在学生が対象です。
+- 🎓 [Adobe Creative Cloud for Students](https://www.adobe.com/creativecloud/buy/students.html) - Adobeは学生と教師に、Photoshop、Illustrator、Premiere Proなどを含むCreative Cloud Proを初年度71%オフの月US$19.99(通常US$69.99)で提供し、2年目以降は月US$39.99です。認定教育機関の在学生が対象です。
 - 🎓 [Figma for Education](https://www.figma.com/education/) - 学生や教師であればFigma Professionalプランを無料で利用でき、無制限のチームプロジェクトと月3,000のAIクレジット(Figma Makeなどで使用可能)をサポートします。FigmaとFigJamは、プロのデザイナーやエンジニアが使用するデザイン・コラボレーションソフトウェアです。
 
 ## 生産性ツール
