@@ -38,6 +38,7 @@ _Last updated: 2026-09-28_
 - 🎓 [Kiro for Students](https://kiro.dev/students/) - AI coding agent from AWS supporting code generation, debugging, and optimization, with strong AWS service integration. Students aged 18+ at 132 universities across 16 countries receive 1,000 credits per month free for one year, including premium models and Kiro Web. Verify via SheerID with a university email.
 - 🆓 [Continue.dev](https://www.continue.dev/) - Open-source AI coding agent for VS Code, JetBrains IDEs, and the CLI. Continue has been acquired by Cursor; the open-source codebase remains freely available.
 - 🆓 [Google Antigravity](https://antigravity.google/) - Google's agent-first IDE for building software with autonomous agents. The free individual plan includes Gemini 3 models, Claude, and GPT-OSS, with unlimited Tab completions and unlimited command requests under weekly rate limits.
+- 🆓 [YYLO](https://github.com/yylo-dev/yylo) - Open-source command-line orchestrator for AI coding agents. Each task runs in an isolated branch/worktree with typed task, validation, and merge boundaries; free for everyone (MIT), installable via npm (@yylo/cli).
 
 ## AI Assistants & Education Plans
 

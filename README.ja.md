@@ -38,6 +38,7 @@ _最終更新: 2026-09-28_
 - 🎓 [Kiro for Students](https://kiro.dev/students/) - AWSが提供するAIコーディングエージェントです。コード生成、デバッグ、最適化をサポートし、AWSサービスとの統合が強みです。16か国132大学の18歳以上の学生が1年間、毎月1,000クレジットを無料で受け取れ、プレミアムモデルとKiro Webが含まれます。大学のメールアドレスでSheerID認証を行います。
 - 🆓 [Continue.dev](https://www.continue.dev/) - VS Code、JetBrains IDE、CLIをサポートするオープンソースのAIコーディングエージェントです。Cursorに買収されましたが、オープンソースのコードベースは引き続き無料で公開されています。
 - 🆓 [Google Antigravity](https://antigravity.google/) - 自律エージェントでソフトウェアを構築するGoogleのエージェントファーストIDEです。無料の個人プランでGemini 3モデル、Claude、GPT-OSSを利用でき、週次の利用上限内でTab補完とコマンドリクエストを無制限に使えます。
+- 🆓 [YYLO](https://github.com/yylo-dev/yylo) - AIコーディングエージェント向けのオープンソースCLIオーケストレーターです。各タスクは分離されたブランチ/ワークツリーで実行され、型付きのタスク・検証・マージ境界を提供します。誰でも無料（MIT）、npm（@yylo/cli）でインストールできます。
 
 ## AIアシスタント・教育プラン
 
