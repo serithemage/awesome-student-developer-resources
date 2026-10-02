@@ -38,6 +38,7 @@ _최종 갱신: 2026-09-28_
 - 🎓 [Kiro for Students](https://kiro.dev/students/) - AWS에서 제공하는 AI 코딩 에이전트입니다. 코드 생성, 디버깅, 최적화를 지원하며, AWS 서비스와의 통합이 강점입니다. 16개국 132개 대학의 만 18세 이상 학생이 1년간 매달 1,000 크레딧을 무료로 받으며, 프리미엄 모델과 Kiro Web이 포함됩니다. 대학 이메일로 SheerID 인증을 거칩니다.
 - 🆓 [Continue.dev](https://www.continue.dev/) - VS Code, JetBrains IDE, CLI를 지원하는 오픈소스 AI 코딩 에이전트입니다. Cursor에 인수되었으며, 오픈소스 코드베이스는 계속 무료로 공개되어 있습니다.
 - 🆓 [Google Antigravity](https://antigravity.google/) - 자율 에이전트로 소프트웨어를 만드는 Google의 에이전트 우선 IDE입니다. 무료 개인 플랜에서 Gemini 3 모델, Claude, GPT-OSS를 사용할 수 있으며, 주간 사용량 제한 내에서 Tab 완성과 명령 요청을 무제한으로 이용할 수 있습니다.
+- 🆓 [YYLO](https://github.com/yylo-dev/yylo) - AI 코딩 에이전트를 위한 오픈소스 커맨드라인 오케스트레이터입니다. 각 작업은 격리된 브랜치/워크트리에서 실행되며 타입화된 작업·검증·병합 경계를 제공합니다. 누구나 무료(MIT), npm(@yylo/cli)으로 설치할 수 있습니다.
 
 ## AI 어시스턴트·교육 플랜
 
