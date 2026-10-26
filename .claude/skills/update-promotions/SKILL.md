@@ -12,6 +12,7 @@ Exa MCP 도구로 학생 대상 무료·할인 프로그램 정보를 조사하�
 ## Workflow
 
 1. **현황 파악**: `README.md`(영어 기본)를 읽고 섹션과 기존 항목 목록을 정리한다.
+   - 세 README의 `AUTO-UPDATE-NOTICE` 블록과 `docs/UPDATING.md` 링크를 보존한다. 편집 후 `node .github/scripts/ensure-readme-notices.mjs`로 주간 갱신 안내와 오류 가능성 문구를 복원·확인한다.
 2. **기존 항목 검증** — `general-purpose` 서브에이전트를 병렬 dispatch (항목이 1~2개뿐인 섹션은 하나로 병합, 총 3~5개 권장):
    - 각 서브에이전트는 Exa MCP의 `web_search_exa`로 항목별 현재 조건(무료/할인율, 크레딧 금액, 기간, 자격 요건)을 확인한다.
    - 변경·종료가 의심되면 Exa MCP의 `web_fetch_exa`로 해당 항목의 공식 페이지를 직접 열어 확정한다. 검색 답변만으로 "변경됨"을 확정하지 않는다.

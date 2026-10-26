@@ -8,6 +8,12 @@ A curated list of discounts and free programs for student developers — focused
 
 _Last updated: 2026-10-26_
 
+<!-- AUTO-UPDATE-NOTICE:START -->
+> This repository is updated through weekly automated agent research (Mondays, 00:00 UTC). [How updates work](docs/UPDATING.md#english). Changes appear after the update pull request is merged.
+>
+> Agent research may contain errors or outdated information. Check the official program website for current benefits, eligibility, and deadlines before applying.
+<!-- AUTO-UPDATE-NOTICE:END -->
+
 ## Contents
 
 - [Vibe Coding & AI App Builders](#vibe-coding--ai-app-builders)

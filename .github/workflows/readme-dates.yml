@@ -8,6 +8,7 @@ on:
       - README.ko.md
       - README.ja.md
       - .github/scripts/update-readme-dates*.mjs
+      - .github/scripts/ensure-readme-notices*.mjs
       - .github/workflows/readme-dates.yml
   workflow_dispatch:
 
@@ -32,18 +33,19 @@ jobs:
           node-version: "24"
           package-manager-cache: false
 
-      - name: Test date updater
-        run: node --test .github/scripts/update-readme-dates.test.mjs
+      - name: Test README maintenance
+        run: node --test .github/scripts/update-readme-dates.test.mjs .github/scripts/ensure-readme-notices.test.mjs
 
-      - name: Update dates and commit changes
+      - name: Restore notices, update dates and commit changes
         run: |
+          node .github/scripts/ensure-readme-notices.mjs
           node .github/scripts/update-readme-dates.mjs
           if git diff --quiet -- README.md README.ko.md README.ja.md; then
-            echo "README dates are already current"
+            echo "README notices and dates are already current"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md README.ko.md README.ja.md
-          git commit -m "docs: update README dates (UTC)"
+          git commit -m "docs: maintain README notices and UTC dates"
           git push origin HEAD:main

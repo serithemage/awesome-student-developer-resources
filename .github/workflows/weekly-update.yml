@@ -144,6 +144,8 @@ jobs:
           const unexpected = [...changed, ...untracked].filter(path => !allowed.has(path));
           if (unexpected.length) throw new Error(`Unexpected editor changes: ${unexpected.join(', ')}`);
           JS
+      - name: Restore permanent update notices
+        run: node .github/scripts/ensure-readme-notices.mjs
       - name: Stamp README dates when content changed
         run: |
           set -euo pipefail
