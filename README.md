@@ -6,7 +6,7 @@ A curated list of discounts and free programs for student developers — focused
 
 **English** | [한국어](README.ko.md) | [日本語](README.ja.md)
 
-_Last updated: 2026-09-28_
+_Last updated: 2026-10-26_
 
 ## Contents
 
