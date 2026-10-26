@@ -12,6 +12,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 주간 자동 갱신 도구는 `package.json`과 `package-lock.json`으로 고정합니다. 설치는 Node.js 24 LTS에서 `npm ci --ignore-scripts`를 사용합니다. pi 1.4.0이 고정한 `undici` 8.10.2의 보안 문제를 해결하기 위해 `overrides`로 8.12.3을 사용합니다.
 
+README 갱신일은 `.github/scripts/update-readme-dates.mjs`가 UTC 날짜로 기록합니다. 주간 워크플로는 README 변경 후 PR 생성 전에 실행하며, `.github/workflows/readme-dates.yml`은 README 변경이 `main`에 반영되면 세 언어판의 날짜를 자동으로 맞춥니다. 날짜가 이미 같으면 추가 커밋을 만들지 않습니다. 검증은 `node --test .github/scripts/update-readme-dates.test.mjs`로 실행합니다.
+
 ## Content Structure & Conventions
 
 세 파일은 동일한 구조를 가집니다: 제목 → 언어 스위처 → `Last updated` 날짜 → 목차(TOC) → 범례 → 콘텐츠 섹션 8개(Vibe Coding & AI App Builders / AI Coding Tools / AI Assistants & Education Plans / Developer Tools / Cloud / Collaboration / Design / Productivity — AI 섹션이 항상 상단) → Contributing.

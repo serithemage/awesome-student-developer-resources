@@ -75,6 +75,12 @@ jobs:
           echo "REPORT=$REPORT" >> "$GITHUB_ENV"
           echo "TODAY=$(date -u +%F)" >> "$GITHUB_ENV"
 
+      - name: Stamp README dates when content changed
+        run: |
+          if ! git diff --quiet -- README.md README.ko.md README.ja.md; then
+            node .github/scripts/update-readme-dates.mjs
+          fi
+
       - name: Open pull request
         uses: peter-evans/create-pull-request@v8.1.1
         with:

@@ -39,7 +39,8 @@ Follow the repository conventions in `CLAUDE.md` (entry format, 🎓/🆓 marker
    - Preserve unverifiable benefit claims. You may append a regional eligibility note marked
      `확인 불가` / `確認不可` without changing the existing benefit description.
    - **Never delete entries.** Leave `ended` entries in place; they are listed in the report for a human to decide.
-   - If anything changed, set the `Last updated` / `최종 갱신` / `最終更新` date in all three files to today's date (UTC).
+   - Preserve the `Last updated` / `최종 갱신` / `最終更新` date markers. The workflow stamps
+     today's date (UTC) in all three files after detecting README changes.
 5. Write a report in Korean to the file path given at the end of this prompt, using this structure:
    - `## 변경` — table: 항목 / 변경 전 / 변경 후 / 근거 URL
    - `## 신규 추가` — table: 항목 / 섹션 / 혜택 요약 / 근거 URL
