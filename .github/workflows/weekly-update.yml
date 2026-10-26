@@ -6,81 +6,163 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 concurrency:
   group: weekly-update
   cancel-in-progress: false
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
-  update:
+  research:
+    name: Research group ${{ matrix.group }}
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        group: [0, 1, 2]
     env:
-      # Override with the repository variable PI_MODEL (e.g. deepseek/deepseek-flash for lower cost).
-      PI_MODEL: ${{ vars.PI_MODEL || 'deepseek/deepseek-v4-pro' }}
-      PI_THINKING: ${{ vars.PI_THINKING || 'high' }}
+      # Rolling official Flash alias; variables can override model and reasoning.
+      PI_MODEL: ${{ vars.PI_MODEL || 'deepseek/deepseek-flash' }}
+      PI_THINKING: ${{ vars.PI_RESEARCH_THINKING || 'low' }}
       PI_TELEMETRY: "0"
     steps:
       - uses: actions/checkout@v7.0.1
         with:
-          fetch-depth: 0 # the agent checks git history for previously removed entries
-
-      - uses: actions/setup-node@v7.1.0
-        with:
-          node-version: "24" # Latest LTS; Node 26 is still Current.
-          check-latest: true
-          cache: npm
-
-      - name: Install pi agent
-        run: |
-          npm ci --ignore-scripts
-          echo "$GITHUB_WORKSPACE/node_modules/.bin" >> "$GITHUB_PATH"
-          echo "PI_CODING_AGENT_DIR=$RUNNER_TEMP/pi-agent" >> "$GITHUB_ENV"
-          node --version
-          node_modules/.bin/pi --version
-
-      - name: Check required secrets and Exa MCP connection
+          fetch-depth: 0 # Check previously removed candidate products.
+      - uses: ./.github/actions/setup-agent
+      - name: Test automation scripts
+        if: matrix.group == 0
+        run: node --test .github/scripts/*.test.mjs
+      - name: Prepare assigned research
+        run: node .github/scripts/weekly-research.mjs prepare ${{ matrix.group }} "$RUNNER_TEMP/research-${{ matrix.group }}"
+      - name: Check secrets and Exa MCP connection
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
         run: |
+          set -euo pipefail
           : "${DEEPSEEK_API_KEY:?Set the DEEPSEEK_API_KEY repository secret}"
           : "${EXA_API_KEY:?Set the EXA_API_KEY repository secret}"
           mkdir -p "$PI_CODING_AGENT_DIR"
           cp .pi/mcp.json "$PI_CODING_AGENT_DIR/mcp.json"
           pi mcp list
-
-      - name: Run update agent
+      - name: Research official evidence
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
         run: |
-          REPORT="$RUNNER_TEMP/report.md"
+          set -euo pipefail
+          RESEARCH_DIR="$RUNNER_TEMP/research-${{ matrix.group }}"
+          pi --approve --mode json --no-session --no-skills \
+            --model "$PI_MODEL" --thinking "$PI_THINKING" \
+            --tools 'read,write,bash,grep,find,ls,mcp__exa__*' \
+            "@$RESEARCH_DIR/prompt.md" \
+            | node .github/scripts/agent-metrics.mjs "$RESEARCH_DIR/agent-metrics.json"
+      - name: Validate report and unchanged repository
+        if: always()
+        run: |
+          set -euo pipefail
+          git diff --exit-code HEAD
+          node .github/scripts/weekly-research.mjs validate ${{ matrix.group }} "$RUNNER_TEMP/research-${{ matrix.group }}"
+      - name: Save research evidence and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: research-${{ matrix.group }}
+          path: |
+            ${{ runner.temp }}/research-${{ matrix.group }}/input.json
+            ${{ runner.temp }}/research-${{ matrix.group }}/prompt.md
+            ${{ runner.temp }}/research-${{ matrix.group }}/report.json
+            ${{ runner.temp }}/research-${{ matrix.group }}/agent-metrics.json
+            ${{ runner.temp }}/research-${{ matrix.group }}/agent-metrics.json.events.jsonl
+          retention-days: 30
+          if-no-files-found: warn
+
+  update:
+    name: Edit multilingual READMEs
+    needs: research
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      PI_MODEL: ${{ vars.PI_MODEL || 'deepseek/deepseek-flash' }}
+      PI_THINKING: ${{ vars.PI_THINKING || 'high' }}
+      PI_TELEMETRY: "0"
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: ./.github/actions/setup-agent
+      - name: Download all research reports
+        uses: actions/download-artifact@v8.0.2
+        with:
+          pattern: research-*
+          path: ${{ runner.temp }}/research
+      - name: Merge validated research and prepare editor prompt
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/editor"
+          node .github/scripts/weekly-research.mjs merge "$RUNNER_TEMP/research" "$RUNNER_TEMP/editor/research.json"
+          REPORT="$RUNNER_TEMP/editor/report.md"
           {
             cat .github/prompts/weekly-update.md
             echo
             echo "Today (UTC): $(date -u +%F)"
+            echo "Research file path: $RUNNER_TEMP/editor/research.json"
             echo "Report file path: $REPORT"
-          } > "$RUNNER_TEMP/prompt.md"
-          pi --approve --print --no-session --no-skills \
-            --model "$PI_MODEL" --thinking "$PI_THINKING" \
-            --tools 'read,edit,write,bash,grep,find,ls,mcp__exa__*' \
-            "@$RUNNER_TEMP/prompt.md"
-          if [ ! -s "$REPORT" ]; then
-            echo "Agent did not produce a report" >&2
-            exit 1
-          fi
+          } > "$RUNNER_TEMP/editor/prompt.md"
           echo "REPORT=$REPORT" >> "$GITHUB_ENV"
           echo "TODAY=$(date -u +%F)" >> "$GITHUB_ENV"
-
+      - name: Edit using verified research
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          set -euo pipefail
+          : "${DEEPSEEK_API_KEY:?Set the DEEPSEEK_API_KEY repository secret}"
+          # Disable repository MCP configuration and expose only file-editing tools.
+          pi --approve --mode json --no-session --no-skills --no-mcp \
+            --model "$PI_MODEL" --thinking "$PI_THINKING" \
+            --tools 'read,edit,write,grep,find,ls' \
+            "@$RUNNER_TEMP/editor/prompt.md" \
+            | node .github/scripts/agent-metrics.mjs "$RUNNER_TEMP/editor/agent-metrics.json"
+          test -s "$REPORT"
+      - name: Verify editor changed only READMEs
+        run: |
+          set -euo pipefail
+          git diff --check
+          node --input-type=module <<'JS'
+          import { execFileSync } from 'node:child_process';
+          const allowed = new Set(['README.md', 'README.ko.md', 'README.ja.md']);
+          const changed = execFileSync('git', ['diff', '--name-only', '-z', 'HEAD']).toString().split('\0').filter(Boolean);
+          const untracked = execFileSync('git', ['ls-files', '--others', '--exclude-standard', '-z']).toString().split('\0').filter(Boolean);
+          const unexpected = [...changed, ...untracked].filter(path => !allowed.has(path));
+          if (unexpected.length) throw new Error(`Unexpected editor changes: ${unexpected.join(', ')}`);
+          JS
       - name: Stamp README dates when content changed
         run: |
+          set -euo pipefail
           if ! git diff --quiet -- README.md README.ko.md README.ja.md; then
             node .github/scripts/update-readme-dates.mjs
           fi
-
+      - name: Save editor report and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: weekly-editor
+          path: |
+            ${{ runner.temp }}/editor/prompt.md
+            ${{ runner.temp }}/editor/research.json
+            ${{ runner.temp }}/editor/report.md
+            ${{ runner.temp }}/editor/agent-metrics.json
+            ${{ runner.temp }}/editor/agent-metrics.json.events.jsonl
+          retention-days: 30
+          if-no-files-found: warn
       - name: Open pull request
         uses: peter-evans/create-pull-request@v8.1.1
         with:
