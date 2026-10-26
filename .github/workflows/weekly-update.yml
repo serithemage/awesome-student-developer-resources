@@ -21,27 +21,41 @@ jobs:
       # Override with the repository variable PI_MODEL (e.g. deepseek/deepseek-flash for lower cost).
       PI_MODEL: ${{ vars.PI_MODEL || 'deepseek/deepseek-v4-pro' }}
       PI_THINKING: ${{ vars.PI_THINKING || 'high' }}
-      PI_VERSION: 0.87.1
-      PI_EXA_VERSION: 0.6.1
-      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-      EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
       PI_TELEMETRY: "0"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0 # the agent checks git history for previously removed entries
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7.1.0
         with:
-          node-version: "22"
+          node-version: "24" # Latest LTS; Node 26 is still Current.
+          check-latest: true
+          cache: npm
 
-      - name: Install pi agent and Exa extension
+      - name: Install pi agent
         run: |
-          npm install -g --ignore-scripts "@earendil-works/pi-coding-agent@${PI_VERSION}"
-          pi install "npm:pi-exa@${PI_EXA_VERSION}"
-          pi list
+          npm ci --ignore-scripts
+          echo "$GITHUB_WORKSPACE/node_modules/.bin" >> "$GITHUB_PATH"
+          echo "PI_CODING_AGENT_DIR=$RUNNER_TEMP/pi-agent" >> "$GITHUB_ENV"
+          node --version
+          node_modules/.bin/pi --version
+
+      - name: Check required secrets and Exa MCP connection
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+        run: |
+          : "${DEEPSEEK_API_KEY:?Set the DEEPSEEK_API_KEY repository secret}"
+          : "${EXA_API_KEY:?Set the EXA_API_KEY repository secret}"
+          mkdir -p "$PI_CODING_AGENT_DIR"
+          cp .pi/mcp.json "$PI_CODING_AGENT_DIR/mcp.json"
+          pi mcp list
 
       - name: Run update agent
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
         run: |
           REPORT="$RUNNER_TEMP/report.md"
           {
@@ -50,9 +64,9 @@ jobs:
             echo "Today (UTC): $(date -u +%F)"
             echo "Report file path: $REPORT"
           } > "$RUNNER_TEMP/prompt.md"
-          pi --print --no-session \
+          pi --approve --print --no-session --no-skills \
             --model "$PI_MODEL" --thinking "$PI_THINKING" \
-            --tools read,edit,write,bash,grep,find,ls,web_search_exa,web_fetch_exa \
+            --tools 'read,edit,write,bash,grep,find,ls,mcp__exa__*' \
             "@$RUNNER_TEMP/prompt.md"
           if [ ! -s "$REPORT" ]; then
             echo "Agent did not produce a report" >&2
@@ -62,7 +76,7 @@ jobs:
           echo "TODAY=$(date -u +%F)" >> "$GITHUB_ENV"
 
       - name: Open pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8.1.1
         with:
           branch: bot/weekly-update
           delete-branch: true

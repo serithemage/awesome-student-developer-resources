@@ -1,0 +1,14 @@
+{
+  "name": "awesome-student-developer-resources",
+  "private": true,
+  "description": "Toolchain for the weekly student-program update agent",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "dependencies": {
+    "@earendil-works/pi-coding-agent": "1.4.0"
+  },
+  "overrides": {
+    "undici": "8.12.3"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "exa": {
+      "type": "streamable-http",
+      "url": "https://mcp.exa.ai/mcp?tools=web_search_exa,web_fetch_exa",
+      "headers": {
+        "Authorization": "Bearer ${EXA_API_KEY}"
+      },
+      "exposure": "direct",
+      "timeout": 120
+    }
+  }
+}
