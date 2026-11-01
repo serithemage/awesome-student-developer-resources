@@ -55,6 +55,7 @@ _Last updated: 2026-10-26_
 
 ## Developer Tools
 
+- 🎓 [Kilobat Pro for Students](https://kilobat.app/students) - Mac network diagnostics and hotspot data monitoring. Students aged 13+ in a degree-granting program can request one free year for two Macs using a school email and renew while enrolled.
 - 🆓 [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/) - Free integrated development environment (IDE) from Microsoft, available to students, open-source contributors, and individual developers. The GitHub Student Developer Pack also includes 1 year of Visual Studio Enterprise for free.
 - 🎓 [JetBrains Free Educational Licenses](https://www.jetbrains.com/community/education/#students) - Free access to professional development tools such as IntelliJ IDEA, PyCharm, and PhpStorm. Verify with a school email to receive a 1-year license, renewable for free while enrolled.
 - 🎓 [GitHub Student Developer Pack](https://education.github.com/pack) - Over $100,000 worth of developer tools and services for students, including GitHub Pro, GitHub Copilot, JetBrains IDEs, and Canva. Open to students aged 13 and up.

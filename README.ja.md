@@ -55,6 +55,7 @@ _最終更新: 2026-10-26_
 
 ## 開発ツール
 
+- 🎓 [Kilobat Pro 学生向け](https://kilobat.app/students) - Mac向けのネットワーク診断・テザリングデータ監視ツールです。学位または修了証を授与する課程に在籍する13歳以上の学生は、学校のメールアドレスでMac 2台分の1年間無料ライセンスを申請でき、在学中は更新できます。
 - 🆓 [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/) - Microsoftが提供する無料の統合開発環境(IDE)です。学生、オープンソースコントリビューター、個人開発者が無料で利用でき、GitHub Student Developer Packを通じてVisual Studio Enterpriseの1年間無料特典も提供されます。
 - 🎓 [JetBrains 無料教育ライセンス](https://www.jetbrains.com/community/education/#students) - JetBrainsは学生にIntelliJ IDEA、PyCharm、PhpStormなどのプロフェッショナル開発ツールを無料で提供しています。学校のメールアドレスで認証すると1年間のライセンスが取得でき、在学中は何度でも更新できます。
 - 🎓 [GitHub Student Developer Pack](https://education.github.com/pack) - 学生向けに10万ドル以上の価値がある開発ツール・サービスのパックです。GitHub Pro、GitHub Copilot、JetBrains IDE、Canvaなどが含まれます。13歳以上の学生が申請できます。
