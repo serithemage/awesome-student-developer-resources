@@ -6,7 +6,7 @@ A curated list of discounts and free programs for student developers — focused
 
 **English** | [한국어](README.ko.md) | [日本語](README.ja.md)
 
-_Last updated: 2026-10-26_
+_Last updated: 2026-11-02_
 
 <!-- AUTO-UPDATE-NOTICE:START -->
 > This repository is updated through weekly automated agent research (Mondays, 00:00 UTC). [How updates work](docs/UPDATING.md#english). Changes appear after the update pull request is merged.
@@ -34,22 +34,25 @@ _Last updated: 2026-10-26_
 - 🎓 [Lovable for Students](https://lovable.dev/students) - 50% off the Lovable Pro plan ($12.50/month) for up to 12 months. Available to students at accredited universities worldwide; verify with a university email or student ID. Must be activated from the Free plan and cannot be reactivated once cancelled.
 - 🎓 [Bolt.new Education Discount](https://bolt.new/education-discount) - 50% off Bolt Pro for university and higher-education students (teachers get Pro for free). Verify via SheerID to receive a coupon code; K-12 is not eligible.
 - 🎓 [v0 for Students (Vercel)](https://v0.app/students) - 1 year of v0 Premium for free — Vercel's AI app builder that generates full-stack apps from prompts. Limited to partner schools (Stanford, MIT, Berkeley, Georgia Tech, Waterloo, and more); sign up with a school email.
+- 🎓 [Base44 Academic Discount](https://docs.base44.com/Account-and-billing/Student-discount) - 50% off the Starter or Builder plan for students, teachers, and staff at academic institutions, for up to 12 months on monthly billing or the first year on annual billing. The one-time discount applies to the first paid subscription and cannot be reactivated after cancellation; it requires a personal account on the free plan, a school email verified with a 6-digit code, and is limited to one per verified email and account.
 
 ## AI Coding Tools
 
 - 🆓 [GitHub Copilot Free](https://github.com/features/copilot) - AI coding assistant from GitHub. The free plan includes 2,000 code completions per month plus a limited chat allowance; students verified through the GitHub Student Developer Pack get the GitHub Copilot Student plan for free.
-- 🆓 [Cursor Free Plan](https://www.cursor.com/) - AI-powered code editor based on VS Code. The free Hobby plan includes limited Agent, Chat, and Tab completion usage with the Auto model — no credit card required; paid plans start at $20/month.
+- 🆓 [Cursor Free Plan](https://www.cursor.com/) - AI coding agent and editor. The Free plan is $0/month and includes limited agent requests and limited Chat requests; paid plans start at $8/month for Plus, with prices excluding applicable taxes and third-party model usage billed separately.
 - 🎓 [Zed Education](https://zed.dev/education) - 1 year of Zed Pro for free for university students aged 18+, including $10/month in AI token credits and unlimited edit predictions. Requires a GitHub account at least 30 days old and a university email; converts to the Free plan after 1 year.
 - 🎓 [OpenAI Codex Student Credits](https://developers.openai.com/community/students) - $100 worth (2,500 credits) of ChatGPT credits usable with Codex, OpenAI's coding agent. Valid for 12 months after issue, one per person. Available to degree-seeking university students in the US and Canada; verify via SheerID.
-- 🎓 [Kiro for Students](https://kiro.dev/students/) - AI coding agent from AWS supporting code generation, debugging, and optimization, with strong AWS service integration. Students aged 18+ at 132 universities across 16 countries receive 1,000 credits per month free for one year, including premium models and Kiro Web. Verify via SheerID with a university email.
+- 🎓 [Kiro for Students](https://kiro.dev/students/) - AI coding agent from AWS supporting code generation, debugging, and optimization, with strong AWS service integration. Students aged 18+ at participating universities get 1,000 credits per month free for 12 months, including paid features such as premium models, Kiro Web, and Kiro Crew. No credit card is required; unused credits do not roll over and add-on credits cannot be purchased during the benefit period. Verify via SheerID with a participating-university email.
 - 🆓 [Continue.dev](https://www.continue.dev/) - Open-source AI coding agent for VS Code, JetBrains IDEs, and the CLI. Continue has been acquired by Cursor; the open-source codebase remains freely available.
-- 🆓 [Google Antigravity](https://antigravity.google/) - Google's agent-first IDE for building software with autonomous agents. The free individual plan includes Gemini 3 models, Claude, and GPT-OSS, with unlimited Tab completions and unlimited command requests under weekly rate limits.
+- 🆓 [Google Antigravity](https://antigravity.google/) - Google's agent-first IDE for building software with autonomous agents. The free Individual plan is $0/month and includes access to a variety of agent models, unlimited Tab completions, unlimited command requests, and basic weekly rate limits. Requires a personal Google Account associated with a supported country or territory and age 18+.
+- 🎓 [Mistral Vibe Education Plan](https://mistral.ai/pricing/) - Verified students can get the Mistral Pro (Education) plan for $5.99/month instead of $14.99/month, with full access to Vibe for coding and long-running tasks, higher usage limits, API credits, and chat/email support.
+- 🎓 [TinyFish Student Program](https://www.tinyfish.ai/students) - Any currently enrolled student can join and receive $35 in TinyFish wallet credits at signup with an eligible academic email, plus access to the Bounty Board, gift cards for approved builds, student community office hours, and a leaderboard.
 
 ## AI Assistants & Education Plans
 
 - 🎓 [ChatGPT Edu](https://openai.com/chatgpt/education/) - OpenAI's ChatGPT Edu is designed for universities and higher education institutions, offering students and faculty access to OpenAI's latest flagship models, enterprise-grade security, higher message limits, and tools for data analysis, tutoring, and research. Institutions can deploy it campus-wide at an affordable price.
 - 🎓 [Claude for Education](https://www.anthropic.com/education) - Anthropic's Claude for Education provides a version of Claude specialized for higher education, including Learning mode for guided study, API credits for student projects, and partnerships with numerous universities. Institutions can contact Anthropic for campus-wide access.
-- 🎓 [Gemini for Students](https://gemini.google/students/) - Google offers eligible students outside the US a free 12-month Google AI Plus plan, and Google AI Pro at a student discount. Google AI Pro can also be bundled with a YouTube Premium student plan for up to 4 years. Verified via SheerID with a school email; redeem by December 31, 2026.
+- 🎓 [Gemini for Students](https://gemini.google/students/) - Country-specific student offer: US college students get a free 12-month Google AI Pro plan with 4x Gemini usage limits, 5 TB storage, Gemini Spark, and Gemini Omni, while students in Korea and Japan get a free 12-month Google AI Plus plan with 2x Gemini usage limits, 400 GB storage, Gemini Omni, study notebooks, and Gemini Live. Redeem by December 31, 2026; unless cancelled, billing after the trial is $19.99/month in the US, ₩7,500/month in Korea, and ¥725/month in Japan. Requires age 18+, higher-education enrollment, SheerID verification, a personal Google Account, and a payment method.
 - 🎓 [Perplexity Education Pro](https://www.perplexity.ai/students) - 50% off Perplexity Pro ($10/month) for university students, faculty, and staff, including education features such as Learn Mode. Verify via SheerID.
 - 🆓 [StudyArena](https://studyarena.com) - Free three-model comparisons for study questions: read anonymous answers, vote, then reveal the models. Requires only a free account (Google, Apple, Discord or email) — no student verification. Choosing models and six-answer comparisons require the Supporter plan ($20/month).
 
@@ -76,11 +79,11 @@ _Last updated: 2026-10-26_
 ## Design
 
 - 🎓 [Adobe Creative Cloud for Students](https://www.adobe.com/creativecloud/buy/students.html) - Students and teachers save 71% on Creative Cloud Pro (Photoshop, Illustrator, Premiere Pro, and more) for the first year — US$19.99/month (regularly US$69.99), then US$39.99/month. Available to students at accredited educational institutions.
-- 🎓 [Figma for Education](https://www.figma.com/education/) - Free Figma Professional plan for students and teachers, with unlimited team projects and 3,000 monthly AI credits (usable with Figma Make). Figma and FigJam are design and collaboration tools used by professional designers and engineers.
+- 🎓 [Figma for Education](https://www.figma.com/education/) - Free Figma Education plan for verified higher-education students and educators, giving them the Figma Professional tier, the full AI toolkit including Figma Make and canvas AI tools, Figma Design, FigJam, and Figma Slides. K-12 schools use the Enterprise tier.
 
 ## Productivity
 
-- 🎓 [Notion for Students and Educators](https://www.notion.so/students) - Free Plus plan for students and educators. Notion is an all-in-one productivity tool for note-taking, task management, and wikis. Sign up with a school email.
+- 🎓 [Notion for Students and Educators](https://www.notion.so/students) - Free Education Plan for individual students and educators at accredited colleges and universities: a one-member workspace with unlimited pages and blocks, file uploads, publishing features, and 30-day version history. Requires a school email recognized through WHED and annual re-verification; there is no set end date while eligibility is maintained.
 
 ## Contributing
 
